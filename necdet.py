@@ -1,3 +1,4 @@
+# coding=utf-8
 import csv
 
 siralar = []                        # proje nolar
@@ -89,16 +90,232 @@ print (ogr_kartlari)
 print (danisman_kartlari)
 
 print (len(ogr_kartlari))
+print (len(danisman_kartlari))
 
+"""
 # kart sayisinin tek mi cift mi oldugunu kontrol ederek cift sayi yapiyoruz
 if len(ogr_kartlari) % 2 != 0:
     ogr_kartlari.append([])
+"""
 
+# ogrenci yaka kartlarini yazdiriyoruz
 
 with open("ogrenci_kartlari.html", "w") as ogr:
-    i = 0
-    while i < 16:
-        print (i, "\t" * 25, i+1 , file = ogr, end="\n")
-        print (ogr_kartlari[i], "\t" * 6, ogr_kartlari[i+1], file = ogr, end="\n")
-        i = i+2
+    print (
+        """
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Öğrenci yaka kartları </title>
+    <link rel = "stylesheet" href="style.css" type = "text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="z-50L0HFIXAJjH6yeYrnQIRhy6-cNnQkvCZo1ZdkgL0" />
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!--[if lte IE 7]>
+    <script src="js/IE8.js" type="text/javascript"></script><![endif]-->
+    <!--[if lt IE 7]>
+    <link rel="stylesheet" type="text/css" media="all" href="css/ie6.css"/><![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"> </script>
+</head>
 
+<body>
+    <div id = "wrapper">
+        """, file=ogr)
+
+    i = 0
+    while i < len(ogr_kartlari):
+        if i == 10 :
+            print ("""
+    <p><!-- pagebreak --></p>
+    <div id = "kart" class = "box pagebreak">
+            """, file=ogr)
+        else:
+            print("""
+    <div id = "kart" class = "box">
+            """, file=ogr)
+        print("""
+        <div id = "isimlik" class = "box">
+            <div id ="logoluk" class = "box">
+                <div id ="logo">
+                    <img name="logo" src="logo_tubitak.jpg" alt="tubitak_logosu">
+                </div>
+                <div id ="proje">
+                    <p>Proje No</p>
+                    <div id = "no">
+            """, file=ogr)
+
+        print(ogr_kartlari[i][0], file = ogr)
+
+        print("""
+                    </div>
+                </div>
+            </div>
+            <div id = "ic_isimlik" class = "box">
+                <div id = "etkinlik">
+                    <p>48. ORTAÖĞRETİM ÖĞRENCİLERİ</P>
+                    <p>ARAŞTIRMA PROJELERİ BÖLGE YARIŞMALARI</p>
+                </div>
+                <div id = "tarih">
+                    <p> 22-24 MART 2016 / VAN </p>
+                </div>
+                <div id = "yazi">
+                    <p> ÖĞRENCİ</p>
+                </div>
+                <div id = "ogr_isim">
+                    <p>
+            """, file=ogr)
+
+        print(ogr_kartlari[i][1], file = ogr)
+
+        print("""
+                    </p>
+                </div>
+                <div id = "il_dal" class="box">
+                    <div id = "il">
+                        <p>
+            """, file=ogr)
+
+        print(ogr_kartlari[i][2], file = ogr)
+
+        print("""
+                        </p>
+                    </div>
+                    <div id = "dal">
+                        <p>
+            """, file=ogr)
+
+        print(ogr_kartlari[i][3], file = ogr)
+
+        print("""
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id = "ogr_okul">
+            <p>
+            """, file=ogr)
+
+        print(ogr_kartlari[i][4], file = ogr)
+
+        print("""
+            </p>
+        </div>
+    </div>
+        """, file=ogr)
+        i = i+1
+
+    print ( """
+    </div>
+</body>
+</html>
+        """, file=ogr)
+
+
+
+#danisman yaka kartlarini yazdiriyoruz
+
+with open("danisman_kartlari.html", "w") as dan:
+    print (
+        """
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Danışman yaka kartları </title>
+    <link rel = "stylesheet" href="style.css" type = "text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="z-50L0HFIXAJjH6yeYrnQIRhy6-cNnQkvCZo1ZdkgL0" />
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!--[if lte IE 7]>
+    <script src="js/IE8.js" type="text/javascript"></script><![endif]-->
+    <!--[if lt IE 7]>
+    <link rel="stylesheet" type="text/css" media="all" href="css/ie6.css"/><![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"> </script>
+</head>
+
+<body>
+    <div id = "wrapper" class="box">
+        """, file=dan)
+
+    i = 0
+    while i < len(danisman_kartlari):
+        print("""
+    <div id = "kart" class = "box">
+        <div id = "isimlik" class = "box">
+            <div id ="logoluk" class = "box">
+                <div id ="logo">
+                    <img name="logo" src="logo_tubitak.jpg" alt="tubitak_logosu">
+                </div>
+                <div id ="proje">
+                    <p>Proje No</p>
+                    <div id = "no">
+            """, file=dan)
+
+        print(danisman_kartlari[i][0], file = dan)
+
+        print("""
+                    </div>
+                </div>
+            </div>
+            <div id = "ic_isimlik" class = "box">
+                <div id = "etkinlik">
+                    <p>48. ORTAÖĞRETİM ÖĞRENCİLERİ</P>
+                    <p>ARAŞTIRMA PROJELERİ BÖLGE YARIŞMALARI</p>
+                </div>
+                <div id = "tarih">
+                    <p> 22-24 MART 2016 / VAN </p>
+                </div>
+                <div id = "yazi">
+                    <p> DANIŞMAN</p>
+                </div>
+                <div id = "dan_isim">
+                    <p>
+            """, file=dan)
+
+        print(danisman_kartlari[i][1], file = dan)
+
+        print("""
+                    </p>
+                </div>
+                <div id = "il_dal" class="box">
+                    <div id = "il">
+                        <p>
+            """, file=dan)
+
+        print(danisman_kartlari[i][2], file = dan)
+
+        print("""
+                        </p>
+                    </div>
+                    <div id = "dal">
+                        <p>
+            """, file=dan)
+
+        print(danisman_kartlari[i][3], file = dan)
+
+        print("""
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id = "dan_okul">
+            <p>
+            """, file=dan)
+
+        print(danisman_kartlari[i][4], file = dan)
+
+        print("""
+            </p>
+        </div>
+    </div>
+        """, file=dan)
+        i = i+1
+
+    print ( """
+    </div>
+</body>
+</html>
+        """, file=dan)
