@@ -120,21 +120,13 @@ with open("ogrenci_kartlari.html", "w") as ogr:
 </head>
 
 <body>
-    <div id = "wrapper">
+    <div id = "wrapper" >
         """, file=ogr)
 
     i = 0
     while i < len(ogr_kartlari):
-        if i == 10 :
-            print ("""
-    <p><!-- pagebreak --></p>
-    <div id = "kart" class = "box pagebreak">
-            """, file=ogr)
-        else:
-            print("""
-    <div id = "kart" class = "box">
-            """, file=ogr)
         print("""
+    <div id = "kart" >
         <div id = "isimlik" class = "box">
             <div id ="logoluk" class = "box">
                 <div id ="logo">
@@ -193,7 +185,7 @@ with open("ogrenci_kartlari.html", "w") as ogr:
                 </div>
             </div>
         </div>
-        <div id = "ogr_okul">
+        <div id = "ogr_okul" class = "box">
             <p>
             """, file=ogr)
 
@@ -236,13 +228,13 @@ with open("danisman_kartlari.html", "w") as dan:
 </head>
 
 <body>
-    <div id = "wrapper" class="box">
+    <div id = "wrapper">
         """, file=dan)
 
     i = 0
     while i < len(danisman_kartlari):
         print("""
-    <div id = "kart" class = "box">
+    <div id = "kart">
         <div id = "isimlik" class = "box">
             <div id ="logoluk" class = "box">
                 <div id ="logo">
@@ -301,7 +293,7 @@ with open("danisman_kartlari.html", "w") as dan:
                 </div>
             </div>
         </div>
-        <div id = "dan_okul">
+        <div id = "dan_okul"  class = "box">
             <p>
             """, file=dan)
 

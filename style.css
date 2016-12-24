@@ -35,25 +35,21 @@ img {
 	max-width: 100%;
 }
 
-
 .box{
-	display:flex;
+	display: flex;
 }
 
+
 #wrapper {
-	display:flex;
-	flex-direction: row;
-	flex-wrap: wrap;
 	width: 200mm;
 	margin:0;
 }
 
 #kart {
+	display: inline-block;
 	width:87mm;
 	height: 50mm;
-	margin : 3mm;
-	flex-direction: column;
-	justify-content: space-between;
+	margin : 2mm;
 	color: #2A0000;
 	border: #970808 solid 2px;
 }
@@ -116,7 +112,7 @@ img {
 	flex-grow: 4;
 	font-size: 12pt;
 	font-weight: bold;
-	background-color: #E6FFB3;
+	background-color: #B7EAEC;
 }
 
 #il_dal {
@@ -125,13 +121,29 @@ img {
 }
 
 #ogr_okul{
+	justify-content: center;
 	height: 25%;
 	font-size: 10pt;
 	background-color: #E0D7E5;
 }
 
 #dan_okul{
+	justify-content: center;
 	height: 25%;
 	font-size: 10pt;
-	background-color: #E6FFB3;
+	background-color: #B7EAEC;
 }
+
+@page {
+  size: A4;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-top: 10mm;
+
+}
+@media print {
+  html, body {
+    width: 210mm;
+    height: 297mm;
+  }
