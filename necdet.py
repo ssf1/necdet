@@ -315,3 +315,5 @@ with open("danisman_kartlari.html", "w") as dan:
 
 
 
+
+
