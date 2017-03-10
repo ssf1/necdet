@@ -51,12 +51,12 @@ img {
 	height: 50mm;
 	margin : 2mm;
 	color: #2A0000;
-	border: #970808 solid 2px;
+	border: #ff1a75 solid 2px;
 }
 
 #isimlik {
 	height: 75%;
-	border-bottom: #970808 solid 1px;
+	border-bottom: #ff1a75 solid 1px;
 }
 
 #logoluk {
@@ -68,20 +68,20 @@ img {
 
 #logo {
 	margin-top: 1mm;
-	width: 14mm;
+	width: 20mm;
 }
 
 #proje {
 }
 
 #no {
-	font-size: 14pt;
+	font-size: 2em;
 }
 
 #ic_isimlik {
 		flex-direction: column;
 		width: 100%;
-		border-left: #970808 solid 1px;
+		border-left: #ff1a75 solid 1px;
 }
 
 #etkinlik {
@@ -103,36 +103,114 @@ img {
 
 #ogr_isim{
 	flex-grow: 4;
-	font-size: 12pt;
+	font-size: 1.6em;
 	font-weight: bold;
-	background-color: #E0D7E5;
+	color: #ffffff;
+	background-color: #ff1a75;
 }
 
-#dan_isim{
-	flex-grow: 4;
-	font-size: 12pt;
-	font-weight: bold;
-	background-color: #B7EAEC;
+
+#ogr_okul{
+	justify-content: center;
+	height: 25%;
+	font-size: 10pt;
+	font-weight: 600;	
+	color: #ffffff;
+	background-color: #ff1a75;
 }
+
 
 #il_dal {
 	flex-grow: 2;
 	justify-content: space-around;;
 }
 
-#ogr_okul{
-	justify-content: center;
-	height: 25%;
-	font-size: 10pt;
-	background-color: #E0D7E5;
+
+
+
+#kart_dan {
+	display: inline-block;
+	width:87mm;
+	height: 50mm;
+	margin : 2mm;
+	color: #2A0000;
+	border: #0099ff solid 2px;
 }
+
+#isimlik_dan {
+	height: 75%;
+	border-bottom: #0099ff solid 1px;
+}
+
+
+#ic_isimlikdan {
+		flex-direction: column;
+		width: 100%;
+		border-left: #0099ff solid 1px;
+}
+
+
+#dan_isim{
+	flex-grow: 4;
+	font-size: 1.6em;
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #0099ff;
+}
+
 
 #dan_okul{
 	justify-content: center;
 	height: 25%;
 	font-size: 10pt;
-	background-color: #B7EAEC;
+	color: #ffffff;
+	font-weight: 600;
+	background-color: #0099ff;
 }
+
+
+
+#kart_per {
+	display: inline-block;
+	width:87mm;
+	height: 50mm;
+	margin : 2mm;
+	color: #2A0000;
+	border: #800000 solid 2px;
+}
+
+#isimlik_per {
+	height: 75%;
+	border-bottom: #800000 solid 1px;
+}
+
+
+#ic_isimlikper {
+		flex-direction: column;
+		width: 100%;
+		border-left: #800000 solid 1px;
+}
+
+
+#per_isim{
+	flex-grow: 4;
+	font-size: 1.6em;
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #b30000;
+}
+
+
+#per_gorev{
+	justify-content: center;
+	height: 25%;
+	font-size: 12pt;
+	font-weight: 600;	
+	color: #ffffff;
+	background-color: #b30000;
+	text-transform: uppercase;
+}
+
 
 @page {
   size: A4;

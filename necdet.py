@@ -17,7 +17,7 @@ def csv_ayirici():
     with open('tubitak_listesi.csv', "r") as liste:
         reader = csv.DictReader(liste)
         for satir in reader:
-            sira = int(satir['sıra'])
+            sira = satir['sıra']
             bas_no = satir['BAŞVURU NO']
             isim = satir['ÖĞRENCİ ADI SOYADI']
             danisman = satir['DANIŞMAN ADI SOYADI']
@@ -234,8 +234,8 @@ with open("danisman_kartlari.html", "w") as dan:
     i = 0
     while i < len(danisman_kartlari):
         print("""
-    <div id = "kart">
-        <div id = "isimlik" class = "box">
+    <div id = "kart_dan">
+        <div id = "isimlik_dan" class = "box">
             <div id ="logoluk" class = "box">
                 <div id ="logo">
                     <img name="logo" src="logo_tubitak.jpg" alt="tubitak_logosu">
@@ -251,7 +251,7 @@ with open("danisman_kartlari.html", "w") as dan:
                     </div>
                 </div>
             </div>
-            <div id = "ic_isimlik" class = "box">
+            <div id = "ic_isimlikdan" class = "box">
                 <div id = "etkinlik">
                     <p>48. ORTAÖĞRETİM ÖĞRENCİLERİ</P>
                     <p>ARAŞTIRMA PROJELERİ BÖLGE YARIŞMALARI</p>
@@ -311,3 +311,7 @@ with open("danisman_kartlari.html", "w") as dan:
 </body>
 </html>
         """, file=dan)
+
+
+
+
