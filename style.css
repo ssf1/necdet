@@ -41,22 +41,23 @@ img {
 
 
 #wrapper {
-	width: 200mm;
+	width: 215mm;
 	margin:0;
+	margin-top:15px;
 }
 
 #kart {
 	display: inline-block;
-	width:87mm;
-	height: 50mm;
+	width:100mm;
+	height: 70mm;
 	margin : 2mm;
 	color: #2A0000;
-	border: #ff1a75 solid 2px;
+	border: #944dff solid 2px;
 }
 
 #isimlik {
-	height: 75%;
-	border-bottom: #ff1a75 solid 1px;
+	height: 60mm;
+	border-bottom: #944dff solid 1px;
 }
 
 #logoluk {
@@ -75,54 +76,77 @@ img {
 }
 
 #no {
-	font-size: 2em;
+	font-size: 2.2em;
+	font-weight: bolder;
 }
 
 #ic_isimlik {
 		flex-direction: column;
 		width: 100%;
-		border-left: #ff1a75 solid 1px;
+		border-left: #944dff solid 1px;
+		height: 60mm;
 }
 
+#ic_is2 {
+        height:60mm;
+
+}
+
+#en_ic {
+
+		flex-direction: column;
+        height:40mm;
+        width: 50mm;
+
+}
+
+#foto {
+    height:40mm;
+    width:30mm;
+    border-left: #944dff solid 1px;
+}
+
+
 #etkinlik {
-	flex-grow: 2;
 	font-weight: bolder;
 	line-height: 50%;
+	flex-grow: 2;
 }
 
 #tarih{
-	flex-grow: 1;
 	line-height: 50%;
+	flex-grow: 1;
 }
 
 #yazi {
-	flex-grow: 2;
 	font-weight: bolder;
-	font-size: 11pt;
+	font-size: 1.6em;
+	flex-grow: 2;
 }
 
 #ogr_isim{
-	flex-grow: 4;
-	font-size: 1.6em;
+	font-size: 1.8em;
 	font-weight: bold;
 	color: #ffffff;
-	background-color: #ff1a75;
+	background-color: #944dff;
+	height:15mm;
+	justify-content: center;
 }
 
 
 #ogr_okul{
 	justify-content: center;
-	height: 25%;
+	height: 10mm;
 	font-size: 10pt;
 	font-weight: 600;	
 	color: #ffffff;
-	background-color: #ff1a75;
+	background-color: #944dff;
 }
 
 
 #il_dal {
-	flex-grow: 2;
-	justify-content: space-around;;
+	justify-content: space-around;
+	height:10mm;
 }
 
 
@@ -130,50 +154,52 @@ img {
 
 #kart_dan {
 	display: inline-block;
-	width:87mm;
-	height: 50mm;
-	margin : 2mm;
+	width:100mm;
+	height: 70mm;
+	margin : 1mm;
 	color: #2A0000;
-	border: #0099ff solid 2px;
+	border: #0000e6 solid 2px;
 }
 
 #isimlik_dan {
-	height: 75%;
-	border-bottom: #0099ff solid 1px;
+	height: 60mm;
+	border-bottom: #0000e6 solid 1px;
 }
 
 
 #ic_isimlikdan {
 		flex-direction: column;
 		width: 100%;
-		border-left: #0099ff solid 1px;
+		height: 60mm;
+		border-left: #0000e6 solid 1px;
 }
 
 
 #dan_isim{
 	flex-grow: 4;
-	font-size: 1.6em;
+	font-size: 1.8em;
 	font-weight: bold;
 	color: #ffffff;
-	background-color: #0099ff;
+	background-color: #0000e6;
+	height: 15mm;
 }
 
 
 #dan_okul{
 	justify-content: center;
-	height: 25%;
+	height: 10mm;
 	font-size: 10pt;
 	color: #ffffff;
 	font-weight: 600;
-	background-color: #0099ff;
+	background-color: #0000e6;
 }
 
 
 
 #kart_per {
 	display: inline-block;
-	width:87mm;
-	height: 50mm;
+	width:100mm;
+	height: 70mm;
 	margin : 2mm;
 	color: #2A0000;
 	border: #800000 solid 2px;
