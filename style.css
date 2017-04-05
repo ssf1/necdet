@@ -50,7 +50,7 @@ img {
 	display: inline-block;
 	width:100mm;
 	height: 70mm;
-	margin : 2mm;
+	margin : 1mm;
 	color: #2A0000;
 	border: #944dff solid 2px;
 }
@@ -94,7 +94,7 @@ img {
 
 #en_ic {
 
-		flex-direction: column;
+	flex-direction: column;
         height:40mm;
         width: 50mm;
 
@@ -200,13 +200,13 @@ img {
 	display: inline-block;
 	width:100mm;
 	height: 70mm;
-	margin : 2mm;
+	margin : 1mm;
 	color: #2A0000;
 	border: #800000 solid 2px;
 }
 
 #isimlik_per {
-	height: 75%;
+	height: 60mm;
 	border-bottom: #800000 solid 1px;
 }
 
@@ -215,6 +215,7 @@ img {
 		flex-direction: column;
 		width: 100%;
 		border-left: #800000 solid 1px;
+		height: 60mm;
 }
 
 
@@ -224,18 +225,29 @@ img {
 	font-weight: bold;
 	color: #ffffff;
 	background-color: #b30000;
+	height:15mm;
+	justify-content: center;
 }
 
 
 #per_gorev{
 	justify-content: center;
-	height: 25%;
-	font-size: 12pt;
+	height: 10mm;
+	font-size: 11pt;
 	font-weight: 600;	
 	color: #ffffff;
 	background-color: #b30000;
 	text-transform: uppercase;
 }
+
+
+#foto_per {
+	width:29mm;
+	height:auto;
+   	border-left: #800000 solid 1px;
+}
+
+
 
 
 @page {

@@ -277,7 +277,7 @@ with open("ilkokul_danisman.html", "w") as dan:
                             <p> 17-20 NİSAN 2017 / VAN </p>
                         </div>
                         <div id = "yazi">
-                            <p> ÖĞRENCİ</p>
+                            <p> DANIŞMAN</p>
                         </div>
                     </div>
                     <div id = "foto" class = "box">

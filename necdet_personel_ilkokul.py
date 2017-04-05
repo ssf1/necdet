@@ -3,6 +3,7 @@ import csv
 
 isimler = []                        # isimleri ayri ayri yazildi (nested list olarak)
 gorevler = []                       # gorevleri yazildi
+fotolar = []                        # foto linkleri yazildi
 
 personel_kartlari = []
 juri_kartlari = []
@@ -13,9 +14,11 @@ def csv_ayirici():
         for satir in reader:
             isim = satir['ad soyad']
             gorev = satir['görev']
+            foto = satir['foto link']
 
             isimler.append(isim)
             gorevler.append(gorev)
+            fotolar.append(foto)
 
 def personeller():
     for i in range(len(isimler)):
@@ -24,7 +27,7 @@ def personeller():
 #        print (iller[i])
 #        print (alanlar[i])
 #        print (okullar[i])
-        personel_kartlari.append([isimler[i], gorevler[i]])
+        personel_kartlari.append([isimler[i], gorevler[i], fotolar[i]])
 
 
 csv_ayirici()
@@ -84,31 +87,38 @@ with open("personel_kartlari.html", "w") as per:
                 </div>
             </div>
             <div id = "ic_isimlikper" class = "box">
-                <div id = "etkinlik">
-                    <p>11. ORTAOKUL ÖĞRENCİLERİ</P>
-                    <p>ARAŞTIRMA PROJELERİ</p>
-                    <p> YARIŞMASI</p>
-                </div>
-                <div id = "tarih">
-                    <p> 17-20 NİSAN 2017 / VAN </p>
+                <div id = "ic_is2" class = "box">
+                    <div id = "en_ic" class = "box">
+                        <div id = "etkinlik">
+                            <p>11. ORTAOKUL ÖĞRENCİLERİ</P>
+                            <p>ARAŞTIRMA PROJELERİ</p>
+                            <p> YARIŞMASI</p>
+                        </div>
+                        <div id = "tarih">
+                            <p> 17-20 NİSAN 2017 / VAN </p>
+                        </div>
+                    </div>
+                    <div id = "foto_per" class = "box">
+                        <img name="foto" src="
+""", file=per)
+        print(personel_kartlari[i][2], file=per)
+
+        print("""
+                        " alt="foto">
+                    </div>
                 </div>
 
                 <div id = "per_isim">
                     <p>
             """, file=per)
 
-        print(personel_kartlari[i][0], file = per)
+        print(personel_kartlari[i][0], file=per)
 
         print("""
                     </p>
                 </div>
                 <div id = "il_dal" class="box">
-                    <div id = "il">
-                        <p> &nbsp; </p>
-                    </div>
-                    <div id = "dal">
-                        <p> &nbsp; </p>
-                    </div>
+
                 </div>
             </div>
         </div>
